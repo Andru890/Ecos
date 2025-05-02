@@ -1,7 +1,7 @@
 package com.footalentgroup.models.enums;
 
 public enum Role {
-    FAN, MUSICIAN;
+    FAN, MUSICIAN, ORGANIZER;
 
     public static final String PREFIX = "ROLE_";
 
