@@ -20,6 +20,5 @@ public class EventRequestDto {
     private String description;
     private String image;
     private Boolean active;
-    private Long organizerId;
-
+    private Long musicianId;
 }

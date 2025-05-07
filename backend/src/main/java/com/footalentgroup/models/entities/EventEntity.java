@@ -42,7 +42,8 @@ public class EventEntity {
     @Convert(converter = TrueFalseConverter.class)
     private Boolean active;
 
+    // Relación con el perfil del músico
     @ManyToOne
-    @JoinColumn(name = "organizer_id", nullable = false)
-    private OrganizerUserEntity organizer;
+    @JoinColumn(name = "musician_profile_id", nullable = false)
+    private MusicianProfileEntity musician;
 }

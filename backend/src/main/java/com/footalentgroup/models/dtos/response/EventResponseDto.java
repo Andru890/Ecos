@@ -21,6 +21,6 @@ public class EventResponseDto {
     private String description;
     private String image;
     private Boolean active;
-    private Long organizerId;
-
+    private Long musicianId;
+    private String musicianStageName;
 }
