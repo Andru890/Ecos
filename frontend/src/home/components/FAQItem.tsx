@@ -35,7 +35,7 @@ const FAQItemList = [
 
 const FAQItem = () => {
   return (
-    <li className="max-w-[1014px] list-none border-b-1 border-black">
+    <li className="w-96 list-none border-b-1 border-black sm:w-128 lg:w-3/5">
       {FAQItemList.map(({ id, question, answer }) => (
         <div key={id} className="border-t-1 border-black">
           <div className="flex justify-between py-[20px]">

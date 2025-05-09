@@ -23,8 +23,8 @@ const OptionsRegisterCards: React.FC<OptionsRegisterCardsProps> = ({
   buttonText,
 }) => {
   return (
-    <div className="flex h-[480px] w-[520px] flex-col rounded-lg border border-[#B1B1B1] bg-white text-center">
-      <div className="mx-4 flex min-h-[78px] w-3/5 gap-4">
+    <div className="mx-auto mb-24 flex h-auto w-96 flex-col rounded-lg border border-[#B1B1B1] bg-white p-4 text-center sm:w-108">
+      <div className="mx-4 flex h-20 gap-4">
         <img src={icono} alt={option} className="mt-4 flex h-10 w-10 items-center justify-center" />
         <div className="mt-2 text-start">
           <h2 className="text-start font-bold text-gray-800">{option}</h2>

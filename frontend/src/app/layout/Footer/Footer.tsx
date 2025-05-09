@@ -6,7 +6,7 @@ import youtube from "@/assets/youtube.webp";
 import facebook from "@/assets/facebook.webp";
 
 const SocialLinks = () => (
-  <div className="flex items-center gap-2">
+  <div className="flex w-full items-center gap-2">
     <a href="" target="_blank" rel="noopener noreferrer" className="max-h-12 max-w-12">
       <img src={youtube} alt="Youtube" />
     </a>
@@ -24,9 +24,9 @@ const SocialLinks = () => (
 
 export const Footer = () => {
   return (
-    <footer className="flex flex-col items-center gap-48">
-      <div className="inline-flex items-start gap-52">
-        <div className="flex flex-col items-start gap-8">
+    <footer className="mt-6 flex flex-col items-center sm:mx-8 sm:items-start">
+      <div className="flex flex-col items-start gap-18 md:inline-flex lg:mx-auto lg:flex-row">
+        <div className="flex flex-col items-start gap-6">
           <h3 className="text-xl font-medium">NOSOTROS</h3>
           <Link to="/" className="border-b">
             bienvenidos
@@ -62,7 +62,9 @@ export const Footer = () => {
           <SocialLinks />
         </div>
       </div>
-      <span className="pb-2">Copyright © 2025 ECOS - Todos los derechos reservados.</span>
+      <span className="mx-auto mt-16 mb-6">
+        Copyright © 2025 ECOS - Todos los derechos reservados.
+      </span>
     </footer>
   );
 };

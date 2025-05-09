@@ -10,8 +10,8 @@ const QuestionsAccordion = ({ title, content }: QuestionsProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full max-w-5xl">
-      <div className="flex items-center justify-between gap-6 self-stretch border-t border-black py-5">
+    <div className="w-full">
+      <div className="flex items-center justify-between gap-6 self-stretch border-t border-black p-4">
         <span className="font-bold">{title}</span>
         <img
           src={arrow}

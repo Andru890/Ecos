@@ -1,9 +1,10 @@
-import { HamburgerIcon } from "@/home/components/ui/HamburgerIcon";
 import CardTopicsList from "./CardTopicsList";
-import { SearchIcon } from "@/home/components/ui/SearchIcon";
 import { ArrowRightIcon } from "@/home/components/ui/ArrowRightIcon";
+import MenuIcon from "@/assets/hamburgerMenu.svg?react";
+import Lens from "@/assets/lens.svg?react";
 import Button from "@/app/ui/Button";
 import { CheckIcon } from "@/home/components/ui/CheckIcon";
+import Input from "@/app/ui/Input";
 
 const SECTIONS = [
   {
@@ -22,28 +23,22 @@ const SECTIONS = [
 
 const FeaturedTopicsList = () => {
   return (
-    <section className="max-w-[1920px]">
-      <h1 className="mb-4 text-center font-[roboto] text-[40px] font-semibold">
+    <section className="w-full">
+      <h1 className="mb-12 text-center text-2xl font-semibold sm:text-4xl lg:text-5xl">
         Encuentra tu artista favorito
       </h1>
-
-      <div className="relative mb-6 w-full max-w-[720px] place-self-center">
-        <input
-          type="text"
-          placeholder="Busca Artista, Álbum, Canción"
-          className="w-full rounded-full bg-gray-100 py-2 pr-4 pl-12 text-sm focus:outline-none"
+      <div className="container mx-auto w-full px-4 pb-6">
+        <Input
+          placeholder="Busca Artista, Album, Canción"
+          className="mx-auto flex w-full bg-[#ECE6F0] sm:w-4/5"
+          startIcon={<MenuIcon />}
+          endIcon={<Lens />}
         />
-        <span className="absolute top-1 left-3 text-gray-400">
-          <HamburgerIcon />
-        </span>
-        <span className="absolute top-1 right-3 text-gray-400">
-          <SearchIcon />
-        </span>
       </div>
 
-      <div className="mx-40 flex flex-col gap-8">
-        <h2 className="mb-4 text-start font-[roboto] text-2xl lg:text-[40px]">Temas destacados</h2>
-        <div className="flex gap-32">
+      <div className="mx-auto flex flex-col gap-4 sm:mx-36">
+        <h2 className="mx-2 mb-4 text-start text-2xl font-semibold">Temas destacados</h2>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
           {SECTIONS.map(({ id, title }) => (
             <div key={id}>
               <div className="flex gap-2 pl-4">
@@ -58,9 +53,9 @@ const FeaturedTopicsList = () => {
         </div>
       </div>
 
-      <div className="mt-8 ml-45 h-[75px] w-[144px]">
+      <div className="mx-36 mt-20 hidden h-18 w-36 lg:flex">
         <Button type="submit" className="rounded-l-none">
-          <span className="flex items-center">
+          <span className="hidden items-center lg:flex">
             <CheckIcon className="mr-2" />
             Ver más
           </span>

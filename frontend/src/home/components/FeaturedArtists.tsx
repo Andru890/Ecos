@@ -4,12 +4,12 @@ import Button from "@/app/ui/Button";
 
 const FeaturedArtists = () => {
   return (
-    <section className="ms-52 mt-24 max-w-[1920px]">
-      <h2 className="mb-8 text-start font-[roboto] text-[40px]">Artista destacado</h2>
+    <section className="mx-auto mt-24 w-full">
+      <h2 className="mx-6 my-12 text-start font-[roboto] text-[40px]">Artista destacado</h2>
 
       <CardFeaturedArtists />
 
-      <div className="mt-8 h-[75px] w-[144px]">
+      <div className=" mx-8 mt-8hidden h-18 w-36 lg:flex">
         <Button type="submit" className="rounded-l-none">
           <span className="flex items-center">
             <CheckIcon className="mr-2" />

@@ -39,18 +39,18 @@ const CardTopicsList = () => {
   return (
     <div className="space-y-4">
       {FAVORITE_LIST.map(({ id, image, title, description, icon1, date, time, icon2 }) => (
-        <div key={id} className="flex max-w-[611px] gap-4 rounded-lg p-4">
+        <div key={id} className="flex w-full gap-4 rounded-lg p-2">
           <img src={image} alt="image" className="h-21 w-21 rounded-xl" />
           <div className="flex flex-col">
             <header>
               <h3 className="text-start text-sm font-semibold">{title}</h3>
             </header>
             <p className="flex-auto text-xs text-gray-600">{description}</p>
-            <footer className="flex items-center justify-between gap-3 text-xs text-gray-500">
+            <footer className="flex items-center justify-around gap-3 text-xs text-gray-500">
               <span>{icon1}</span>
               <span>{date}</span>
               <span>{time}</span>
-              <span className="flex-auto justify-items-end">{icon2}</span>
+              <span>{icon2}</span>
             </footer>
           </div>
         </div>

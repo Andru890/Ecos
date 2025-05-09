@@ -40,16 +40,14 @@ export default function OptionsRegister() {
   ];
 
   return (
-    <div className="ms-52 mt-24 h-[984px] max-w-[1920px]">
-      <div className="h-[189px] w-[684px] text-start text-3xl">
-        <h2 className="text-5xl font-normal">
-          Conectamos músicos, fans y
-          <br />
-          eventos en una sola plataforma
+    <div className="mx-auto mt-12 w-auto text-center">
+      <div className="mx-12 w-5/6 text-start text-3xl md:mx-24 md:w-158">
+        <h2 className="text-4xl font-normal md:text-[40px]">
+          Conectamos músicos, fans y eventos en una sola plataforma
         </h2>
-        <h2 className="mt-12 text-5xl font-bold">¡Empieza!</h2>
+        <h2 className="mt-12 text-[32px] font-bold md:text-[40px]">¡Empieza!</h2>
       </div>
-      <div className="mt-32 flex gap-6">
+      <div className="mt-32 flex w-full flex-col gap-6 lg:flex-row lg:px-12">
         {cardsData.map((data) => (
           <OptionsRegisterCards key={data.id} {...data} />
         ))}

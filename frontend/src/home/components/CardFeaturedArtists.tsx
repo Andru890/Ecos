@@ -37,12 +37,12 @@ const favoriteArtistList = [
 
 const CardFeaturedArtists = () => {
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:grid-rows-2">
       {favoriteArtistList.map(({ id, image, title, date, description }) => (
-        <div key={id} className="flex max-w-[702px] gap-6 rounded-lg px-6 py-2">
-          <img src={image} alt="image" className="h-[216px] w-[216px] rounded-xl" />
+        <div key={id} className="flex gap-4 rounded-lg px-6 py-2">
+          <img src={image} alt="image" className="h-42 w-42 rounded-xl" />
 
-          <div className="flex flex-col gap-6 text-start">
+          <div className="flex flex-col gap-4 text-start">
             <div className="flex flex-col gap-1">
               <h3 className="text-2xl font-semibold">{title}</h3>
               <p className="text-xs text-[#49454F]">{date}</p>
@@ -50,7 +50,10 @@ const CardFeaturedArtists = () => {
                 {description}
               </p>
             </div>
-            <button type="submit" className="max-w-max rounded-[27px] bg-[#B4B4B4] px-6 py-2.5">
+            <button
+              type="submit"
+              className="max-w-max rounded-[27px] bg-[#B4B4B4] px-6 py-2 lg:flex"
+            >
               Ver más
             </button>
           </div>
